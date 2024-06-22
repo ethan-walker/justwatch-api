@@ -2,6 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "hello"
 
 @app.route('/<film_id>')
 def index(film_id):
